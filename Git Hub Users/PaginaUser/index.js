@@ -39,9 +39,10 @@ function getUserReposGithub(a) {
                     let NameRepositories = document.createElement('div')
                     NameRepositories.innerText = element.name;
                     document.body.appendChild(NameRepositories);
+
                     let LinkRepositorio = document.createElement('a');
-                    LinkRepositorio.href = element.html_url;
-                    LinkRepositorio.innerText = element.html_url;
+                    LinkRepositorio.href = element.clone_url;
+                    LinkRepositorio.innerText = element.clone_url;
                     NameRepositories.appendChild(LinkRepositorio);
 
                 });
