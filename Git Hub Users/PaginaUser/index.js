@@ -48,8 +48,6 @@ function getUserReposGithub(a) {
                 console.log('Repositories Data:', data);
             });
 
-        }).catch(function (erro) {
-            console.log('erro:', erro);
-        });
+        })
 }
 getUserReposGithub();
