@@ -1,5 +1,7 @@
 inputFiltro = document.createElement('input');
+inputFiltro.placeholder = "Filtro"
 document.body.appendChild(inputFiltro);
+
 
 const ListaUsuarios = [
     { name: 'Bruno Henrique', userName: 'brunohvc' },
