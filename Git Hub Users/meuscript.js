@@ -1,3 +1,6 @@
+inputFiltro = document.createElement('input');
+document.body.appendChild(inputFiltro);
+
 const ListaUsuarios = [
     { name: 'Bruno Henrique', userName: 'brunohvc' },
     { name: 'Vytor Augusto Rosa', userName: 'K43RU' },
