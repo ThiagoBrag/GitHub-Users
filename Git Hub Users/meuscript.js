@@ -154,16 +154,24 @@ function getContentRegesteryPersonModal(removeModal) {
     const header = document.createElement('div');
     header.id = 'person-header';
     const title = document.createElement('h1');
-    title.innerText = 'Cadastrar Pessoa';
+    title.innerText = 'Cadastrar Novo User';
     header.appendChild(title);
 
     const main = document.createElement('div');
     main.id = 'person-main';
 
+    const NomePalavra = document.createElement('h2');
+    NomePalavra.innerText = 'Nome:';
+    main.appendChild(NomePalavra);
+
     const inputNome = document.createElement('input');
     inputNome.type = 'text';
     inputNome.placeholder = 'Nome completo';
     main.appendChild(inputNome);
+
+    const UsernamePalavra = document.createElement('h2');
+    UsernamePalavra.innerText = 'Username:';
+    main.appendChild(UsernamePalavra);
 
     const inputUsername = document.createElement('input');
     inputUsername.type = 'text';
@@ -178,11 +186,29 @@ function getContentRegesteryPersonModal(removeModal) {
         const name = inputNome.value;
         const userName = inputUsername.value;
 
-        if (!name || name == '') {
+        if (!name || name == '' || !userName || userName == '') {
+            let DivVermelha = document.createElement('div');
+            DivVermelha.className = "DivVermelha";
+            main.appendChild(DivVermelha);
+            let TextoAviso = document.createElement('div');
+            TextoAviso.className = "TextoAviso"
+            TextoAviso.innerText = "Cadastro inválido!";
+            DivVermelha.appendChild(TextoAviso);
+            setTimeout (() => {DivVermelha.remove(); }, 3200)
             return;
-        }
-        if (!userName || userName == '') {
-            return;
+        } else {
+
+        let colocarDivVerde = document.createElement('div');
+            colocarDivVerde.className = "colocarDivVerde";
+            document.body.appendChild(colocarDivVerde);
+            let DivVerde = document.createElement('div');
+            DivVerde.className = "DivVerde";
+            colocarDivVerde.appendChild(DivVerde);
+            let TextoAvisoVerde = document.createElement('div');
+            TextoAvisoVerde.className = "TextoAvisoVerde"
+            TextoAvisoVerde.innerText = "Cadastrado com Sucesso!";
+            DivVerde.appendChild(TextoAvisoVerde);
+            setTimeout (() => {DivVerde.remove(); }, 3200)
         }
 
         registeryPerson(name, userName);
