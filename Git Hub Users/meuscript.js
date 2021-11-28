@@ -1,5 +1,6 @@
 inputFiltro = document.createElement('input');
-inputFiltro.placeholder = "Filtro"
+inputFiltro.id = "txtBusca";
+inputFiltro.placeholder = "Filtro";
 document.body.appendChild(inputFiltro);
 
 const ListaUsuarios = [
@@ -87,7 +88,7 @@ Tabela();
 
 
 
-    let botaoCadastro = document.createElement('button');
+let botaoCadastro = document.createElement('button');
 let listPerson = [];
 document.body.appendChild(botaoCadastro);
 botaoCadastro.onclick = clickButtonRegisteryPerson;
@@ -194,11 +195,11 @@ function getContentRegesteryPersonModal(removeModal) {
             TextoAviso.className = "TextoAviso"
             TextoAviso.innerText = "Cadastro inválido!";
             DivVermelha.appendChild(TextoAviso);
-            setTimeout (() => {DivVermelha.remove(); }, 3200)
+            setTimeout(() => { DivVermelha.remove(); }, 3200)
             return;
         } else {
 
-        let colocarDivVerde = document.createElement('div');
+            let colocarDivVerde = document.createElement('div');
             colocarDivVerde.className = "colocarDivVerde";
             document.body.appendChild(colocarDivVerde);
             let DivVerde = document.createElement('div');
@@ -208,7 +209,7 @@ function getContentRegesteryPersonModal(removeModal) {
             TextoAvisoVerde.className = "TextoAvisoVerde"
             TextoAvisoVerde.innerText = "Cadastrado com Sucesso!";
             DivVerde.appendChild(TextoAvisoVerde);
-            setTimeout (() => {DivVerde.remove(); }, 3200)
+            setTimeout(() => { DivVerde.remove(); }, 3200)
         }
 
         registeryPerson(name, userName);
@@ -239,21 +240,3 @@ function registeryPerson(name, userName) {
     ListaUsuarios.push(person);
     Tabela();
 }
-
-// $(function(){
-//     $("#tabela input").keyup(function(){       
-//         var index = $(this).parent().index();
-//         var nth = "#tabela td:nth-child("+(index+1).toString()+")";
-//         var valor = $(this).val().toUpperCase();
-//         $("#tabela tbody tr").show();
-//         $(nth).each(function(){
-//             if($(this).text().toUpperCase().indexOf(valor) < 0){
-//                 $(this).parent().hide();
-//             }
-//         });
-//     });
- 
-//     $("#tabela input").blur(function(){
-//         $(this).val("");
-//     });
-// });
