@@ -26,6 +26,7 @@ const ListaUsuarios = [
     { name: 'Otavio Matheus Neves', userName: 'otavionvs' },
 ]
 
+
 function Tabela() {
     const TabelaAtual = document.querySelector('table');
     if (TabelaAtual) {
@@ -240,3 +241,4 @@ function registeryPerson(name, userName) {
     ListaUsuarios.push(person);
     Tabela();
 }
+
