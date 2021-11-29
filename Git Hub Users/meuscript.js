@@ -83,6 +83,7 @@ function Tabela() {
 
     document.body.appendChild(table);
 }
+myFunction();
 
 function getPersonTableRow(name, userName) {
     const row = document.createElement('tr');
