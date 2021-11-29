@@ -60,7 +60,6 @@ function Tabela() {
           }
         }
       }
-      myFunction();
 
     ColunaNome.innerText = 'ColunaNome';
     ColunaUsername.innerText = 'ColunaUser';
