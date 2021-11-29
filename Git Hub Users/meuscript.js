@@ -38,6 +38,7 @@ function Tabela() {
     const ColunaNome = document.createElement('th');
     const ColunaUsername = document.createElement('th');
     const ColunaBotao = document.createElement('th');
+    table.id = "myTable"
 
     ColunaNome.innerText = 'ColunaNome';
     ColunaUsername.innerText = 'ColunaUser';
