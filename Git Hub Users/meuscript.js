@@ -1,11 +1,6 @@
 inputFiltro = document.createElement('input');
-<<<<<<< HEAD
-inputFiltro.placeholder = "Filtro"
 inputFiltro.id = "myInput"
-=======
-inputFiltro.id = "txtBusca";
-inputFiltro.placeholder = "Filtro";
->>>>>>> ab0f6cc5549319ac0c821329b664ccfd4a652c9d
+inputFiltro.placeholder = "Filtro"
 document.body.appendChild(inputFiltro);
 
 const ListaUsuarios = [
@@ -268,7 +263,3 @@ function registeryPerson(name, userName) {
     ListaUsuarios.push(person);
     Tabela();
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ab0f6cc5549319ac0c821329b664ccfd4a652c9d
