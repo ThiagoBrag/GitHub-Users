@@ -1,5 +1,5 @@
 inputFiltro = document.createElement('input');
-
+inputFiltro.id = "myInput"
 inputFiltro.placeholder = "Filtro"
 document.body.appendChild(inputFiltro);
 
