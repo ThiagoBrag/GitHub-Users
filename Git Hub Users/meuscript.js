@@ -1,5 +1,6 @@
 inputFiltro = document.createElement('input');
 inputFiltro.placeholder = "Filtro"
+inputFiltro.id = "myInput"
 document.body.appendChild(inputFiltro);
 
 const ListaUsuarios = [
@@ -36,6 +37,7 @@ function Tabela() {
     const ColunaNome = document.createElement('th');
     const ColunaUsername = document.createElement('th');
     const ColunaBotao = document.createElement('th');
+    table.id = "myTable"
 
     ColunaNome.innerText = 'ColunaNome';
     ColunaUsername.innerText = 'ColunaUser';
@@ -45,6 +47,27 @@ function Tabela() {
     row.appendChild(ColunaUsername);
     row.appendChild(ColunaBotao);
     table.appendChild(row);
+
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+      
+      
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
 
     ListaUsuarios.forEach(function (element) {
         console.log('element:', element);
