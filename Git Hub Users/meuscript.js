@@ -40,6 +40,7 @@ function Tabela() {
     const ColunaBotao = document.createElement('th');
     table.id = "myTable"
 
+    inputFiltro.onkeyup = myFunction
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
@@ -83,7 +84,6 @@ function Tabela() {
 
     document.body.appendChild(table);
 }
-myFunction();
 
 function getPersonTableRow(name, userName) {
     const row = document.createElement('tr');
