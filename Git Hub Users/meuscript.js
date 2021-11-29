@@ -1,6 +1,11 @@
 inputFiltro = document.createElement('input');
+<<<<<<< HEAD
 inputFiltro.placeholder = "Filtro"
 inputFiltro.id = "myInput"
+=======
+inputFiltro.id = "txtBusca";
+inputFiltro.placeholder = "Filtro";
+>>>>>>> ab0f6cc5549319ac0c821329b664ccfd4a652c9d
 document.body.appendChild(inputFiltro);
 
 const ListaUsuarios = [
@@ -25,6 +30,7 @@ const ListaUsuarios = [
     { name: 'Bruna Alves Mafra', userName: 'BMafra' },
     { name: 'Otavio Matheus Neves', userName: 'otavionvs' },
 ]
+
 
 function Tabela() {
     const TabelaAtual = document.querySelector('table');
@@ -110,7 +116,7 @@ Tabela();
 
 
 
-    let botaoCadastro = document.createElement('button');
+let botaoCadastro = document.createElement('button');
 let listPerson = [];
 document.body.appendChild(botaoCadastro);
 botaoCadastro.onclick = clickButtonRegisteryPerson;
@@ -217,11 +223,11 @@ function getContentRegesteryPersonModal(removeModal) {
             TextoAviso.className = "TextoAviso"
             TextoAviso.innerText = "Cadastro inválido!";
             DivVermelha.appendChild(TextoAviso);
-            setTimeout (() => {DivVermelha.remove(); }, 3200)
+            setTimeout(() => { DivVermelha.remove(); }, 3200)
             return;
         } else {
 
-        let colocarDivVerde = document.createElement('div');
+            let colocarDivVerde = document.createElement('div');
             colocarDivVerde.className = "colocarDivVerde";
             document.body.appendChild(colocarDivVerde);
             let DivVerde = document.createElement('div');
@@ -231,7 +237,7 @@ function getContentRegesteryPersonModal(removeModal) {
             TextoAvisoVerde.className = "TextoAvisoVerde"
             TextoAvisoVerde.innerText = "Cadastrado com Sucesso!";
             DivVerde.appendChild(TextoAvisoVerde);
-            setTimeout (() => {DivVerde.remove(); }, 3200)
+            setTimeout(() => { DivVerde.remove(); }, 3200)
         }
 
         registeryPerson(name, userName);
@@ -262,3 +268,7 @@ function registeryPerson(name, userName) {
     ListaUsuarios.push(person);
     Tabela();
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ab0f6cc5549319ac0c821329b664ccfd4a652c9d
