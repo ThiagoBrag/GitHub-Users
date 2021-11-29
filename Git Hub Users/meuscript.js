@@ -1,6 +1,6 @@
 inputFiltro = document.createElement('input');
 inputFiltro.id = "myInput"
-console.log = inputFiltro.id;
+console.log = (inputFiltro.id);
 inputFiltro.placeholder = "Filtro"
 document.body.appendChild(inputFiltro);
 
