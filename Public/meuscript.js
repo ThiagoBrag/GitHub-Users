@@ -51,9 +51,9 @@ function Tabela() {
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
       
-      
+      console.log(tr.length)
         for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[1 && 0];
+          td = tr[i].getElementsByTagName("td")[0];
           if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
