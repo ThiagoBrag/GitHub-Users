@@ -7,6 +7,7 @@ inputFiltroUsername.placeholder = "Pesquisar user"
 let PorFiltro = document.createElement('div')
 PorFiltro.id = "PorFiltro";
 PorFiltro.appendChild(inputFiltro)
+PorFiltro.appendChild(inputFiltroUsername)
 document.body.appendChild(PorFiltro);
 
 const ListaUsuarios = [
