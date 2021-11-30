@@ -43,7 +43,7 @@ function Tabela() {
     const ColunaBotao = document.createElement('th');
     table.id = "Tablee"
 
-    inputFiltro.onkeyup = ProcurarNome, ProcurarUsername
+    inputFiltro.onkeyup = ProcurarNome;
     function ProcurarNome() {
         var input, filtro, table, tr, td, i, txtValue;
         input = document.getElementById("InputFiltro");
@@ -63,7 +63,7 @@ function Tabela() {
           }
         }
     }
-    
+
     ColunaNome.innerText = 'ColunaNome';
     ColunaUsername.innerText = 'ColunaUser';
     ColunaBotao.innerText = 'ColunaBotao';
