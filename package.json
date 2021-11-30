@@ -1,0 +1,24 @@
+{
+  "name": "github-users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoBrag/GitHub-Users.git"
+  },
+  "keywords": [],
+  "author": "Thiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoBrag/GitHub-Users/issues"
+  },
+  "homepage": "https://github.com/ThiagoBrag/GitHub-Users#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
