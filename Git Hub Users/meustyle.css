@@ -43,13 +43,32 @@ table,
 tr,
 th,
 td {
+    padding: 5px;
     border: black 1px solid;
 }
 
-body {
+#ColocarTabela {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
+}
+
+#PorFiltro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ColocarBotao {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colocarDivVerde {
+    position: absolute;
 }
 
 .DivVerde {
@@ -85,28 +104,16 @@ body {
 .TextoAviso {
     position: absolute;
     font-size: large;
-    margin-top: 5px;
+    margin-top: 10px;
     color: red;
-}
-
-.DivVerde {
-    background-color: rgb(42, 189, 98);
-    border: solid 2px black;
-    border-radius: 15px;
-    padding: 20px;
-    animation: animacaoo 3s;
-}
-
-@keyframes animacaoo {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .TextoAvisoVerde {
     font-size: large;
     color: rgb(0, 0, 0);
+}
+
+#myInput {
+    padding-left: 20px;
+    padding-right: 20px;
 }

@@ -1,7 +1,10 @@
 inputFiltro = document.createElement('input');
 inputFiltro.id = "myInput"
-inputFiltro.placeholder = "Filtro"
-document.body.appendChild(inputFiltro);
+inputFiltro.placeholder = "Pesquisar nome/user"
+let PorFiltro = document.createElement('div')
+PorFiltro.id = "PorFiltro";
+PorFiltro.appendChild(inputFiltro)
+document.body.appendChild(PorFiltro);
 
 const ListaUsuarios = [
     { name: 'Bruno Henrique', userName: 'brunohvc' },
@@ -81,8 +84,10 @@ function Tabela() {
 
         table.appendChild(rowTable);
     })
-
-    document.body.appendChild(table);
+    let ColocarTabela = document.createElement('div');
+    ColocarTabela.id = "ColocarTabela";
+    ColocarTabela.appendChild(table);
+    document.body.appendChild(ColocarTabela);
 }
 
 function getPersonTableRow(name, userName) {
@@ -116,9 +121,13 @@ Tabela();
 
 let botaoCadastro = document.createElement('button');
 let listPerson = [];
-document.body.appendChild(botaoCadastro);
 botaoCadastro.onclick = clickButtonRegisteryPerson;
 botaoCadastro.innerText = "Cadastrar Pessoa";
+let ColocarBotao = document.createElement("div")
+ColocarBotao.id = "ColocarBotao"
+ColocarBotao.appendChild(botaoCadastro);
+document.body.appendChild(ColocarBotao);
+
 
 function clickButtonRegisteryPerson() {
     const modal = createModal();
