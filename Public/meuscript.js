@@ -63,25 +63,7 @@ function Tabela() {
           }
         }
     }
-    function ProcurarUsername() {
-        var input, filtro, table, tr, td, i, txtValue;
-        input = document.getElementById("InputFiltro");
-        filtro = input.value.toUpperCase();
-        table = document.getElementById("Tablee");
-        tr = table.getElementsByTagName("tr");
-
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[1];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filtro) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-    }
+    
     ColunaNome.innerText = 'ColunaNome';
     ColunaUsername.innerText = 'ColunaUser';
     ColunaBotao.innerText = 'ColunaBotao';
