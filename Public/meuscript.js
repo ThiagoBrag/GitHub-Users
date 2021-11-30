@@ -43,7 +43,7 @@ function Tabela() {
     const ColunaBotao = document.createElement('th');
     table.id = "Tablee"
 
-    inputFiltro.onkeyup = ProcurarNome;
+    inputFiltro.onkeyup = ProcurarNome,ProcurarUsername;
     function ProcurarNome() {
         var input, filtro, table, tr, td, i, txtValue;
         input = document.getElementById("InputFiltro");
@@ -55,6 +55,25 @@ function Tabela() {
           td = tr[i].getElementsByTagName("td")[0];
           if (td) {
             txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filtro) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+    }
+    function ProcurarUsername() {
+        var input, filtro, table, tr, td, i, txtValue;
+        input = document.getElementById("InputFiltro");
+        filtro = input.value.toUpperCase();
+        table = document.getElementById("Tablee");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+          td2 = tr[i].getElementById("td2");
+          if (td2) {
+            txtValue = td2.textContent || td2.innerText;
             if (txtValue.toUpperCase().indexOf(filtro) > -1) {
               tr[i].style.display = "";
             } else {
@@ -93,6 +112,7 @@ function getPersonTableRow(name, userName) {
     const row = document.createElement('tr');
     const ColunaNome = document.createElement('td');
     const ColunaUsername = document.createElement('td');
+    ColunaUsername.id = "td2";
     const ColunaBotao = document.createElement('td');
 
     function IrPagina() {
