@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/meuindex.html'));
 });
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/Public'));
 
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
