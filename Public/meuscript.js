@@ -97,7 +97,7 @@ function getPersonTableRow(name, userName) {
     const ColunaBotao = document.createElement('td');
 
     function IrPagina() {
-        location.href = './PaginaUser/index.html?' + userName;
+        location.href = './PaginaUser./index.html?' + userName;
     }
 
     ColunaNome.innerText = name;
