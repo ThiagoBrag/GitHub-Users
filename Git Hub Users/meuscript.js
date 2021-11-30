@@ -218,6 +218,7 @@ function getContentRegesteryPersonModal(removeModal) {
     footer.id = 'person-footer';
     const buttonRegistery = document.createElement('button');
     buttonRegistery.innerText = 'Registrar';
+    buttonRegistery.id = "BotaoRegistrar";
     function registery() {
         const name = inputNome.value;
         const userName = inputUsername.value;
@@ -254,6 +255,7 @@ function getContentRegesteryPersonModal(removeModal) {
 
     const buttonCancel = document.createElement('button');
     buttonCancel.innerText = 'Cancelar';
+    buttonCancel.id = "BotaoCancelar"
     buttonCancel.onclick = removeModal;
 
     footer.appendChild(buttonRegistery);
