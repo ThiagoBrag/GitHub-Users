@@ -1,5 +1,5 @@
 inputFiltro = document.createElement('input');
-inputFiltro.id = "myInput"
+inputFiltro.id = "InputFiltro"
 inputFiltro.placeholder = "Pesquisar nome/user"
 let PorFiltro = document.createElement('div')
 PorFiltro.id = "PorFiltro";
@@ -41,21 +41,40 @@ function Tabela() {
     const ColunaNome = document.createElement('th');
     const ColunaUsername = document.createElement('th');
     const ColunaBotao = document.createElement('th');
-    table.id = "myTable"
+    table.id = "Tablee"
 
-    inputFiltro.onkeyup = myFunction
-    function myFunction() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
+    inputFiltro.onkeyup = ProcurarNome, ProcurarUsername
+    function ProcurarNome() {
+        var input, filtro, table, tr, td, i, txtValue;
+        input = document.getElementById("InputFiltro");
+        filtro = input.value.toUpperCase();
+        table = document.getElementById("Tablee");
         tr = table.getElementsByTagName("tr");
 
         for (i = 0; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td")[0];
           if (td) {
             txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            if (txtValue.toUpperCase().indexOf(filtro) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+    }
+    function ProcurarUsername() {
+        var input, filtro, table, tr, td, i, txtValue;
+        input = document.getElementById("InputFiltro");
+        filtro = input.value.toUpperCase();
+        table = document.getElementById("Tablee");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filtro) > -1) {
               tr[i].style.display = "";
             } else {
               tr[i].style.display = "none";
