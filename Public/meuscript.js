@@ -1,13 +1,15 @@
 inputFiltro = document.createElement('input');
 inputFiltro.id = "InputFiltro"
 inputFiltro.placeholder = "Pesquisar nome"
+PorFiltro.appendChild(inputFiltro)
+
 inputFiltroUsername = document.createElement('input');
 inputFiltroUsername.id = "InputFiltroUsername"
 inputFiltroUsername.placeholder = "Pesquisar user"
+PorFiltro.appendChild(inputFiltroUsername)
+
 let PorFiltro = document.createElement('div')
 PorFiltro.id = "PorFiltro";
-PorFiltro.appendChild(inputFiltro)
-PorFiltro.appendChild(inputFiltroUsername)
 document.body.appendChild(PorFiltro);
 
 const ListaUsuarios = [
